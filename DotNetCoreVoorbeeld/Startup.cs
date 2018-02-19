@@ -25,9 +25,20 @@ namespace DotNetCoreVoorbeeld
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+
+
+
+
+
+
+
+            //komt altijd als laatste!
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Hello world");
             });
         }
     }
